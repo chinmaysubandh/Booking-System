@@ -9,7 +9,6 @@ app.use(cors());
 app.use(express.json());
 
 
-app.use("/api/auth", authRoutes);
 
 app.get("/", (req, res) => {
     res.json({
@@ -18,5 +17,6 @@ app.get("/", (req, res) => {
     })
 })
 
+app.use("/api/auth", authRoutes);
 
 export default app;
